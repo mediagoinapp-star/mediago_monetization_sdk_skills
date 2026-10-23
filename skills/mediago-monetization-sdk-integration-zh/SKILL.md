@@ -1,11 +1,11 @@
 ---
-name: mediago-ads-integration-zh
-description: 识别客户工程类型，并将 MediaGo Ads SDK 的接入、升级、排障或验证请求路由至受支持的平台流程。适用于客户未明确说明应用框架或工程类型不清晰的场景。
+name: mediago-monetization-sdk-integration-zh
+description: 识别客户工程类型，并将 MediaGo Monetization SDK 的接入、升级、排障或验证请求路由至受支持的平台流程。适用于客户未明确说明应用框架或工程类型不清晰的场景。
 ---
 
-# MediaGo Ads 接入路由（中文）
+# MediaGo Monetization SDK 接入路由（中文）
 
-本 Skill 只负责识别客户工程并选择受支持的工作流。不要在此 Skill 中生成 MediaGo SDK 调用代码、修改文件或实际执行接入。
+本 Skill 只负责识别客户工程并选择受支持的工作流。不要在此 Skill 中生成 MediaGo Monetization SDK 调用代码、修改文件或实际执行接入。
 
 ## 先检查，后提问
 
@@ -20,8 +20,8 @@ description: 识别客户工程类型，并将 MediaGo Ads SDK 的接入、升�
 
 ## 路由规则
 
-- 仅 Android 原生工程：加载并遵循 `mediago-ads-android-integration-zh`。
-- 存在 Android Bridge 证据的 Unity 工程：加载并遵循 `mediago-ads-unity-android-integration-zh`。这是 Unity 到 Android 的桥接工作流，不是官方独立 Unity SDK。
+- 仅 Android 原生工程：加载并遵循 `mediago-monetization-sdk-android-integration-zh`。
+- 存在 Android Bridge 证据的 Unity 工程：加载并遵循 `mediago-monetization-sdk-unity-android-integration-zh`。这是 Unity 到 Android 的桥接工作流，不是官方独立 Unity SDK。
 - 未发现 Android Bridge 的 Unity 工程：明确说明 MediaGo 当前未提供官方独立 Unity SDK，不得编造 C# API；若客户明确希望采用 Android Bridge，则路由至 Unity Android Bridge 工作流，先做可行性检查再提出代码方案。
 - Unity 与原生 Android 混合工程：询问客户要接入哪个模块；只有客户选择独立 Android 模块后，才路由至 Android Skill。
 - 无法识别：只问一个简洁问题：“你的工程是 Android 原生、Unity，还是包含独立 Android 原生模块的混合工程？”

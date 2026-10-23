@@ -1,11 +1,11 @@
 ---
-name: mediago-ads-unity-android-integration-zh
-description: 在使用 EDM4U、Android Gradle/Manifest Template 与已审核 C# JNI Bridge 的 Unity 或团结引擎工程中接入、审查、升级、排查或验证 MediaGo Ads。适用于存在 Android 目标或 AndroidJavaObject/AndroidJavaProxy Bridge 证据的工程。
+name: mediago-monetization-sdk-unity-android-integration-zh
+description: 在使用 EDM4U、Android Gradle/Manifest Template 与已审核 C# JNI Bridge 的 Unity 或团结引擎工程中接入、审查、升级、排查或验证 MediaGo Monetization SDK。适用于存在 Android 目标或 AndroidJavaObject/AndroidJavaProxy Bridge 证据的工程。
 ---
 
-# MediaGo Ads Unity Android Bridge 接入（中文）
+# MediaGo Monetization SDK Unity Android Bridge 接入（中文）
 
-本 Skill 面向通过 C# 到 Android Bridge 接入 MediaGo 的 Unity/团结引擎客户工程。这不是官方独立 Unity SDK。不得编造 C# API、凭记忆推导 Android 签名，或修改 `Library/` 下生成的文件。
+本 Skill 面向通过 C# 到 Android Bridge 接入 MediaGo Monetization SDK 的 Unity/团结引擎客户工程。这不是官方独立 Unity SDK。不得编造 C# API、凭记忆推导 Android 签名，或修改 `Library/` 下生成的文件。
 
 ## 不可跳过的规则
 
@@ -40,7 +40,7 @@ description: 在使用 EDM4U、Android Gradle/Manifest Template 与已审核 C# 
 
 直连和 Client Bidding Bridge 必须验证唯一初始化责任方，且仅在初始化成功后加载。Adapter 以 Adapter 文档规定的生命周期为准。精确 Java 类、方法、回调接口和版本必须来自已批准发布条目；若导出项目使用 SNAPSHOT 或没有批准兼容条目，只能报告发布阻塞，不得编造兼容性。
 
-按需阅读[Bridge 工程模型](references/bridge-project-model.md)、Android Skill 的[直连接入](../mediago-ads-android-integration/references/direct-integration.md)、[广告样式](../mediago-ads-android-integration/references/ad-formats.md)、[聚合](../mediago-ads-android-integration/references/mediation-adapters.md)、[Client Bidding](../mediago-ads-android-integration/references/client-bidding.md)。
+按需阅读[Bridge 工程模型](references/bridge-project-model.md)、Android Skill 的[直连接入](../mediago-monetization-sdk-android-integration/references/direct-integration.md)、[广告样式](../mediago-monetization-sdk-android-integration/references/ad-formats.md)、[聚合](../mediago-monetization-sdk-android-integration/references/mediation-adapters.md)、[Client Bidding](../mediago-monetization-sdk-android-integration/references/client-bidding.md)。
 
 ## 4. 计划与确认
 

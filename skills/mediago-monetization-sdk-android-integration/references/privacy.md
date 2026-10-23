@@ -1,6 +1,6 @@
 # Privacy and Compliance Configuration (GDPR / CCPA / COPPA)
 
-The MediaGo / AdMaster Android SDK supports major global privacy frameworks (GDPR IAB TCF v2, CCPA, COPPA) as well as fine-grained device signal controls. Configure these settings after user consent is collected and before calling `AdMaster.initialize(...)` or issuing your first ad request.
+The MediaGo Monetization SDK (AdMaster Android SDK) supports major global privacy frameworks (GDPR IAB TCF v2, CCPA, COPPA) as well as fine-grained device signal controls. Configure these settings after user consent is collected and before calling `AdMaster.initialize(...)` or issuing your first ad request.
 
 ---
 

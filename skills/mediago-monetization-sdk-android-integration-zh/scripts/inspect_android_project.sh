@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Read-only project inventory for a MediaGo Android integration review.
+# Read-only project inventory for a MediaGo Monetization SDK Android integration review.
 set -euo pipefail
 project_root="${1:-.}"
 cd "$project_root"

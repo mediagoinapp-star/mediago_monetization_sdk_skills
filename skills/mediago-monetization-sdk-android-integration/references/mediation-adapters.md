@@ -1,6 +1,6 @@
 # Mediation Adapters Configuration Guide
 
-When integrating the MediaGo / AdMaster SDK through a third-party mediation platform (AdMob, AppLovin MAX, TradPlus, or TopOn), add both the core SDK (`cc.admaster.android:sdk`) and the matching mediation adapter dependency, then configure the custom adapter class names and server parameters in your mediation dashboard.
+When integrating the MediaGo Monetization SDK (AdMaster SDK) through a third-party mediation platform (AdMob, AppLovin MAX, TradPlus, or TopOn), add both the core SDK (`cc.admaster.android:sdk`) and the matching mediation adapter dependency, then configure the custom adapter class names and server parameters in your mediation dashboard.
 
 ---
 

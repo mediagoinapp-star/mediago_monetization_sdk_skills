@@ -1,6 +1,6 @@
 # 隐私合规设置指南（GDPR / CCPA / COPPA）
 
-MediaGo / AdMaster Android SDK 支持海外主流隐私合规框架（GDPR IAB TCF v2、CCPA、COPPA）及细粒度设备信息采集控制。建议在用户完成合规授权后、`AdMaster.initialize(...)` 或首次发起广告请求前完成设置。
+MediaGo Monetization SDK（AdMaster Android SDK）支持海外主流隐私合规框架（GDPR IAB TCF v2、CCPA、COPPA）及细粒度设备信息采集控制。建议在用户完成合规授权后、`AdMaster.initialize(...)` 或首次发起广告请求前完成设置。
 
 ---
 

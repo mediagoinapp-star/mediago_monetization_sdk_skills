@@ -2,8 +2,8 @@
 
 Use this precedence order when facts conflict:
 
-1. Release-approved MediaGo compatibility matrix in this repository or its published replacement.
-2. Versioned public MediaGo Android integration documentation.
+1. Release-approved MediaGo Monetization SDK compatibility matrix in this repository or its published replacement.
+2. Versioned public MediaGo Monetization SDK Android integration documentation.
 3. Public SDK/API artifacts for the exact resolved version.
 4. Customer project evidence.
 5. General knowledge only for non-versioned explanation; never for API signatures, adapter class names, coordinates, or compatibility claims.

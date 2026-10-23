@@ -1,11 +1,11 @@
 ---
-name: mediago-ads-android-integration
-description: Integrate, upgrade, troubleshoot, audit, or validate the MediaGo Ads SDK in native Android Java or Kotlin projects, including direct integration, Client Bidding, and AdMob, AppLovin MAX, TradPlus, and TopOn adapters.
+name: mediago-monetization-sdk-android-integration
+description: Integrate, upgrade, troubleshoot, audit, or validate the MediaGo Monetization SDK in native Android Java or Kotlin projects, including direct integration, Client Bidding, and AdMob, AppLovin MAX, TradPlus, and TopOn adapters.
 ---
 
-# MediaGo Ads Android Integration
+# MediaGo Monetization SDK Android Integration
 
-Use this Skill for native Android MediaGo Ads work. It supports direct SDK integration, Client Bidding, and approved AdMob, AppLovin MAX, TradPlus, TopOn international, and TopOn legacy adapter paths. It does not support Unity, Flutter, React Native, iOS-only projects, or undocumented custom bridges.
+Use this Skill for native Android MediaGo Monetization SDK work. It supports direct SDK integration, Client Bidding, and approved AdMob, AppLovin MAX, TradPlus, TopOn international, and TopOn legacy adapter paths. It does not support Unity, Flutter, React Native, iOS-only projects, or undocumented custom bridges.
 
 ## Non-negotiable rules
 

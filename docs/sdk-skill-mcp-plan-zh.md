@@ -1,11 +1,11 @@
-# MediaGo SDK 接入 Skill 与 MCP 对外发布方案
+# MediaGo Monetization SDK 接入 Skill 与 MCP 对外发布方案
 
 **状态：待评审**  
-**范围：Android 原生 SDK；Unity 当前仅识别并说明不支持。**
+**范围：Android 原生 SDK 与 Unity Android 桥接。**
 
 ## 1. 目标
 
-让客户在 AI IDE 中完成 MediaGo Android SDK 接入、升级和排障，并保证：
+让客户在 AI IDE 中完成 MediaGo Monetization SDK（Android）接入、升级和排障，并保证：
 
 - 接入结论以客户工程和官方资料为准；
 - 修改工程和运行构建前必须获得客户确认；
@@ -27,8 +27,8 @@
 
 | 层 | 对外组件 | 职责 |
 |---|---|---|
-| 路由层 | `mediago-ads-integration` / `-zh` | 识别 Android、Unity、混合工程，路由到受支持流程。 |
-| 实施层 | `mediago-ads-android-integration` / `-zh` | 扫描工程、输出变更计划、经确认后实施接入并验证。 |
+| 路由层 | `mediago-monetization-sdk-integration` / `-zh` | 识别 Android、Unity、混合工程，路由到受支持流程。 |
+| 实施层 | `mediago-monetization-sdk-android-integration` / `-zh`、`mediago-monetization-sdk-unity-android-integration` / `-zh` | 扫描工程、输出变更计划、经确认后实施接入并验证。 |
 | 知识服务层 | `@mediago/sdk-mcp`（规划） | 提供版本兼容、官方知识检索和受控诊断。 |
 | 维护层 | Git 仓库 + Skill 平台 + npm | 管理源码、版本、发布说明、审核资料与安装入口。 |
 
@@ -39,10 +39,12 @@
 ### 4.1 已有 Skill
 
 ```text
-mediago-ads-integration
-mediago-ads-android-integration
-mediago-ads-integration-zh
-mediago-ads-android-integration-zh
+mediago-monetization-sdk-integration
+mediago-monetization-sdk-android-integration
+mediago-monetization-sdk-unity-android-integration
+mediago-monetization-sdk-integration-zh
+mediago-monetization-sdk-android-integration-zh
+mediago-monetization-sdk-unity-android-integration-zh
 ```
 
 - Router：Android 原生工程路由至 Android Skill；Unity 工程明确提示当前无官方 Unity SDK；混合工程先询问目标模块。

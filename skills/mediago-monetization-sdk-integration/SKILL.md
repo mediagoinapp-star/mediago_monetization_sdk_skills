@@ -1,11 +1,11 @@
 ---
-name: mediago-ads-integration
-description: Identify a customer project and route MediaGo Ads SDK integration, upgrade, troubleshooting, or validation requests to the supported platform workflow. Use when the app framework is unspecified or unclear.
+name: mediago-monetization-sdk-integration
+description: Identify a customer project and route MediaGo Monetization SDK integration, upgrade, troubleshooting, or validation requests to the supported platform workflow. Use when the app framework is unspecified or unclear.
 ---
 
-# MediaGo Ads Integration Router
+# MediaGo Monetization SDK Integration Router
 
-Use this skill only to identify the customer's project and select the supported workflow. Do not generate MediaGo SDK calls, modify files, or perform an integration in this router.
+Use this skill only to identify the customer's project and select the supported workflow. Do not generate MediaGo Monetization SDK calls, modify files, or perform an integration in this router.
 
 ## Inspect before asking
 
@@ -20,8 +20,8 @@ Read [platform routing](references/platform-routing.md) when the project is mixe
 
 ## Route
 
-- Native Android only: load and follow `mediago-ads-android-integration`.
-- Unity with Android bridge evidence: load and follow `mediago-ads-unity-android-integration`. This is a documented Unity-to-Android bridge workflow, not an official standalone Unity SDK.
+- Native Android only: load and follow `mediago-monetization-sdk-android-integration`.
+- Unity with Android bridge evidence: load and follow `mediago-monetization-sdk-unity-android-integration`. This is a documented Unity-to-Android bridge workflow, not an official standalone Unity SDK.
 - Unity without Android bridge evidence: state that MediaGo does not currently provide an official standalone Unity SDK. Do not fabricate C# APIs. If the customer explicitly wants an Android bridge, route to the Unity Android bridge workflow for a feasibility inspection before proposing code.
 - Mixed Unity + native Android: ask which module should receive the integration. Route only if the customer chooses the independent Android module.
 - Unknown: ask one concise question: “Is this a native Android project, a Unity project, or a project with an independent Android module?”

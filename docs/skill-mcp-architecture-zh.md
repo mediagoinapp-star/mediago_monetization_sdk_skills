@@ -1,10 +1,10 @@
-# MediaGo Ads SDK Skill 与 MCP 设计方案
+# MediaGo Monetization SDK Skill 与 MCP 设计方案
 
 > **当前执行决策（阶段 A）**：先发布不依赖 MCP 的 Skill 与本地结构化知识包。MCP 仅保留为后续可选的分发适配层；在完成 support window、评测、双语一致性和发布治理前，不建设 MCP Server 或托管诊断服务。
 
 ## 1. 目标与边界
 
-本方案将 MediaGo Ads SDK 接入能力拆为两个协作层：
+本方案将 MediaGo Monetization SDK 接入能力拆为两个协作层：
 
 - **Skill**：面向客户工程的工作流控制器。它检查工程、选择接入路径、展示变更计划、取得用户确认、执行已批准的改动并报告验证证据。
 - **MCP**：面向 Agent 的版本化 SDK 知识服务。它返回经审核的 SDK 事实、兼容性、接入配方、Adapter 配置、错误码和 Client Bidding 规则。
@@ -57,13 +57,16 @@ flowchart LR
 
 保留并演化以下 Skill：
 
-1. `mediago-ads-integration` / `mediago-ads-integration-zh`
+1. `mediago-monetization-sdk-integration` / `mediago-monetization-sdk-integration-zh`
    - 仅负责工程类型识别和路由。
-   - 原生 Android 路由至 Android Skill；Unity 明确声明当前不支持官方 Unity SDK；混合项目先确认目标模块。
+   - 原生 Android 路由至 Android Skill；Unity Android 桥接路由至 Unity Android Skill；混合项目先确认目标模块。
 
-2. `mediago-ads-android-integration` / `mediago-ads-android-integration-zh`
+2. `mediago-monetization-sdk-android-integration` / `mediago-monetization-sdk-android-integration-zh`
    - 负责 Android 工程检查、路径选择、计划、确认、实施和验证。
    - 支持 Java、Kotlin、直连、AdMob、MAX、TradPlus、TopOn 国际版、TopOn 旧版和 Client Bidding。
+
+3. `mediago-monetization-sdk-unity-android-integration` / `mediago-monetization-sdk-unity-android-integration-zh`
+   - 负责 Unity / 团结引擎 Android 桥接工程的检查、EDM4U 依赖管理、`AndroidJavaObject`/`AndroidJavaProxy` 桥接实施与验证。
 
 ### 4.2 请求类型与路径选择
 

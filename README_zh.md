@@ -1,20 +1,20 @@
-# MediaGo Ads Skills（官方中文说明）
+# MediaGo Monetization SDK Skills（官方中文说明）
 
 [English](README.md) | [简体中文](README_zh.md)
 
-面向外部开发者的 **MediaGo Ads SDK**（`cc.admaster.android:sdk`）官方 AI Agent 接入、升级、代码审查与排障 Skill 集合。支持在 **Claude Code、Cursor、OpenAI Codex、GitHub Copilot、Windsurf、Cline、Roo Code、Antigravity** 等主流 AI 编程工具中开箱即用。
+面向外部开发者的 **MediaGo Monetization SDK**（`cc.admaster.android:sdk`）官方 AI Agent 接入、升级、代码审查与排障 Skill 集合。支持在 **Claude Code、Cursor、OpenAI Codex、GitHub Copilot、Windsurf、Cline、Roo Code、Antigravity** 等主流 AI 编程工具中开箱即用。
 
 ---
 
 ## Skill 支持的核心功能一览
 
-### 1. 智能工程识别与路由 (`mediago-ads-integration-zh`)
+### 1. 智能工程识别与路由 (`mediago-monetization-sdk-integration-zh`)
 - 只读扫描工程根目录结构，自动识别工程类型并路由到对应工作流：
-  - **Android 原生工程**（含 `settings.gradle[.kts]`、`com.android.application`、`AndroidManifest.xml`）→ 自动路由至 `mediago-ads-android-integration-zh`。
-  - **Unity / 团结引擎 Android 桥接工程**（含 `Assets/Plugins/Android/`、`*Dependencies.xml`、`mainTemplate.gradle`、`AndroidJavaObject` / `AndroidJavaProxy`）→ 自动路由至 `mediago-ads-unity-android-integration-zh`。
+  - **Android 原生工程**（含 `settings.gradle[.kts]`、`com.android.application`、`AndroidManifest.xml`）→ 自动路由至 `mediago-monetization-sdk-android-integration-zh`。
+  - **Unity / 团结引擎 Android 桥接工程**（含 `Assets/Plugins/Android/`、`*Dependencies.xml`、`mainTemplate.gradle`、`AndroidJavaObject` / `AndroidJavaProxy`）→ 自动路由至 `mediago-monetization-sdk-unity-android-integration-zh`。
   - **混合工程（Unity + 独立原生模块）** → 先识别并向开发者确认目标模块，防止改错目录。
 
-### 2. Android 原生全流程接入与排障 (`mediago-ads-android-integration-zh`)
+### 2. Android 原生全流程接入与排障 (`mediago-monetization-sdk-android-integration-zh`)
 
 #### A. 覆盖三大主流接入模式
 | 接入模式 | 支持的具体功能 |
@@ -39,7 +39,7 @@
 - **官方联调测试参数**：内置官方测试 App ID（`ad2fd73dca2ccffd312495bcd8a33d29`）及五大广告样式测试广告位 ID（激励 `100090001`、插屏 `100090002`、原生 `100090003`、开屏 `100090004`、横幅 `100090005`），方便开发者快速跑通 Demo，并内置防误写生产配置的保护门禁。
 - **接入审查与版本升级**：支持对照已验证兼容矩阵（[`compatibility/compatibility.json`](compatibility/compatibility.json)）检查 AGP / Gradle / JDK / `minSdk` / `compileSdk`、R8/ProGuard 混淆规则、Manifest 合并结果与生命周期内存泄漏隐患。
 
-### 3. Unity / 团结引擎 Android 桥接支持 (`mediago-ads-unity-android-integration-zh`)
+### 3. Unity / 团结引擎 Android 桥接支持 (`mediago-monetization-sdk-unity-android-integration-zh`)
 - 针对 Unity 直出 Android 的桥接工程，分层审查与实施：
   1. **EDM4U 依赖声明层**（`*Dependencies.xml` 版本锁定与无 GMS 依赖处理）
   2. **Android Gradle 与 Manifest 模板层**（`Assets/Plugins/Android/mainTemplate.gradle`、`settingsTemplate.gradle`、`AndroidManifest.xml`）
@@ -69,8 +69,8 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills
 
 # 或直接指定安装中文版 Android 接入 Skill
 npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
-  --skill mediago-ads-integration-zh \
-  --skill mediago-ads-android-integration-zh
+  --skill mediago-monetization-sdk-integration-zh \
+  --skill mediago-monetization-sdk-android-integration-zh
 ```
 
 ### 方式二：Claude Code 原生插件市场安装
@@ -78,7 +78,7 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
 
 ```text
 /plugin marketplace add mediagoinapp-star/mediago_monetization_sdk_skills
-/plugin install mediago-ads-zh@mediago-ads-skills
+/plugin install mediago-monetization-sdk-zh@mediago-monetization-sdk-skills
 ```
 
 ### 方式三：手动复制到工程目录
@@ -88,14 +88,14 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
 - **Codex / 通用 Agent**：`.agents/skills/`
 
 ### 方式四：配套挂载官方 MCP Server（推荐，与 Skill 双剑合璧）
-本仓库配套提供官方 MCP 服务端 [**`mediago-ads-mcp`**](https://github.com/mediagoinapp-star/mediago-ads-mcp)，提供版本兼容矩阵查询、多语言代码模板生成、聚合参数 JSON 生成、三层错误码精准诊断与 Logcat 10 阶段生命周期漏斗分析。在 `.cursor/mcp.json` 或 `.mcp.json` 中添加：
+本仓库配套提供官方 MCP 服务端 [**`mediago_monetization_sdk_mcp`**](https://github.com/mediagoinapp-star/mediago_monetization_sdk_mcp)，提供版本兼容矩阵查询、多语言代码模板生成、聚合参数 JSON 生成、三层错误码精准诊断与 Logcat 10 阶段生命周期漏斗分析。在 `.cursor/mcp.json` 或 `.mcp.json` 中添加：
 
 ```json
 {
   "mcpServers": {
-    "mediago-ads-mcp": {
+    "mediago_monetization_sdk_mcp": {
       "command": "npx",
-      "args": ["-y", "github:mediagoinapp-star/mediago-ads-mcp"]
+      "args": ["-y", "github:mediagoinapp-star/mediago_monetization_sdk_mcp"]
     }
   }
 }
@@ -107,12 +107,12 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
 
 | Skill 目录 | 语言 | 功能说明 |
 |---|---|---|
-| `skills/mediago-ads-integration-zh` | 简体中文 | 识别客户工程类型并路由至受支持的工作流 |
-| `skills/mediago-ads-android-integration-zh` | 简体中文 | Android 原生 Java/Kotlin 直连、Client Bidding、聚合 Adapter 接入、审查与排障 |
-| `skills/mediago-ads-unity-android-integration-zh` | 简体中文 | Unity / 团结引擎 Android 桥接（EDM4U + Gradle 模板 + C# JNI）接入与审查 |
-| `skills/mediago-ads-integration` | English | Project type detector and workflow router |
-| `skills/mediago-ads-android-integration` | English | Native Android Java/Kotlin integration, adapters, Client Bidding, and troubleshooting |
-| `skills/mediago-ads-unity-android-integration` | English | Unity / Tuanjie Android bridge via EDM4U, Gradle templates, and C# JNI |
+| `skills/mediago-monetization-sdk-integration-zh` | 简体中文 | 识别客户工程类型并路由至受支持的工作流 |
+| `skills/mediago-monetization-sdk-android-integration-zh` | 简体中文 | Android 原生 Java/Kotlin 直连、Client Bidding、聚合 Adapter 接入、审查与排障 |
+| `skills/mediago-monetization-sdk-unity-android-integration-zh` | 简体中文 | Unity / 团结引擎 Android 桥接（EDM4U + Gradle 模板 + C# JNI）接入与审查 |
+| `skills/mediago-monetization-sdk-integration` | English | Project type detector and workflow router |
+| `skills/mediago-monetization-sdk-android-integration` | English | Native Android Java/Kotlin integration, adapters, Client Bidding, and troubleshooting |
+| `skills/mediago-monetization-sdk-unity-android-integration` | English | Unity / Tuanjie Android bridge via EDM4U, Gradle templates, and C# JNI |
 
 ---
 
@@ -121,17 +121,17 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
 安装完成后，你可以在 AI 编程助手中直接复制以下提示词触发对应功能：
 
 - **场景 1：全新 SDK 直连接入（含官方测试参数）**
-  > “请使用 MediaGo Android 接入 Skill 检查我当前的 Android 工程，使用官方测试参数帮我规划 SDK 初始化以及激励视频（RewardedAd）和插屏广告（ExpressInterstitialAd）的直连接入方案。”
+  > “请使用 MediaGo Monetization SDK Android 接入 Skill 检查我当前的 Android 工程，使用官方测试参数帮我规划 SDK 初始化以及激励视频（RewardedAd）和插屏广告（ExpressInterstitialAd）的直连接入方案。”
 - **场景 2：在现有工程中新增信息流自渲染 / 横幅 / 开屏广告**
-  > “帮我在现有的 Android 工程中新增 MediaGo 信息流自渲染广告（`NativeAdLoader` + `NativeAd` + `registerViewForInteraction`），并处理好可点击区域注册和页面销毁释放。”
+  > “帮我在现有的 Android 工程中新增 MediaGo Monetization SDK 信息流自渲染广告（`NativeAdLoader` + `NativeAd` + `registerViewForInteraction`），并处理好可点击区域注册和页面销毁释放。”
 - **场景 3：接入聚合平台 Adapter（AdMob / MAX / TradPlus / TopOn）**
-  > “请检查我的 Android 应用模块，帮我接入 MediaGo 的 AppLovin MAX（或 TopOn / AdMob / TradPlus）聚合 Adapter，并告诉我聚合后台需要填写的自定义 Adapter 全限定类名和参数格式。”
+  > “请检查我的 Android 应用模块，帮我接入 MediaGo Monetization SDK 的 AppLovin MAX（或 TopOn / AdMob / TradPlus）聚合 Adapter，并告诉我聚合后台需要填写的自定义 Adapter 全限定类名和参数格式。”
 - **场景 4：接入 Client Bidding（客户端竞价）**
-  > “帮我在现有的激励视频加载逻辑中接入 MediaGo Client Bidding，实现获取 eCPM（`getResponseInfo().getEcpmLevel()`）、校验就绪状态，并在竞胜/竞败时调用 `notifyWin` 和 `notifyLoss`。”
+  > “帮我在现有的激励视频加载逻辑中接入 MediaGo Monetization SDK Client Bidding，实现获取 eCPM（`getResponseInfo().getEcpmLevel()`）、校验就绪状态，并在竞胜/竞败时调用 `notifyWin` 和 `notifyLoss`。”
 - **场景 5：报错码诊断与无填充排查**
   > “我们请求广告时回调了错误码 `1030003`（或 `1040004` / `2000` / `4000`），请结合我们的代码帮我排查具体原因并给出修复方案。”
 - **场景 6：上线前接入完整性审查（Audit）**
-  > “请使用 MediaGo Android Skill 对我当前工程的广告接入代码做一次全面审查，检查是否存在初始化时机风险、内存泄漏、混淆缺失或测试 ID 未替换问题。”
+  > “请使用 MediaGo Monetization SDK Android Skill 对我当前工程的广告接入代码做一次全面审查，检查是否存在初始化时机风险、内存泄漏、混淆缺失或测试 ID 未替换问题。”
 
 ---
 

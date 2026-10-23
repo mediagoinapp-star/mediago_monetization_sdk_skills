@@ -1,20 +1,20 @@
-# MediaGo Ads Skills
+# MediaGo Monetization SDK Skills
 
 [English](README.md) | [简体中文](README_zh.md)
 
-Official AI Agent Skills for integrating, upgrading, auditing, and troubleshooting the **MediaGo Ads SDK** (`cc.admaster.android:sdk`) in customer applications. Designed for **Claude Code, Cursor, OpenAI Codex, GitHub Copilot, Windsurf, Cline, Roo Code, Antigravity**, and other `SKILL.md`-compatible coding agents.
+Official AI Agent Skills for integrating, upgrading, auditing, and troubleshooting the **MediaGo Monetization SDK** (`cc.admaster.android:sdk`) in customer applications. Designed for **Claude Code, Cursor, OpenAI Codex, GitHub Copilot, Windsurf, Cline, Roo Code, Antigravity**, and other `SKILL.md`-compatible coding agents.
 
 ---
 
 ## What Can These Skills Do?
 
-### 1. Automatic Project Detection & Routing (`mediago-ads-integration`)
+### 1. Automatic Project Detection & Routing (`mediago-monetization-sdk-integration`)
 - Inspects your repository structure read-only and routes your request to the right workflow:
-  - **Native Android projects** (`settings.gradle[.kts]`, `com.android.application`, `AndroidManifest.xml`) → routed to `mediago-ads-android-integration`.
-  - **Unity / Tuanjie Android Bridge projects** (`Assets/Plugins/Android/`, `*Dependencies.xml`, `mainTemplate.gradle`, `AndroidJavaObject` / `AndroidJavaProxy`) → routed to `mediago-ads-unity-android-integration`.
+  - **Native Android projects** (`settings.gradle[.kts]`, `com.android.application`, `AndroidManifest.xml`) → routed to `mediago-monetization-sdk-android-integration`.
+  - **Unity / Tuanjie Android Bridge projects** (`Assets/Plugins/Android/`, `*Dependencies.xml`, `mainTemplate.gradle`, `AndroidJavaObject` / `AndroidJavaProxy`) → routed to `mediago-monetization-sdk-unity-android-integration`.
   - **Mixed repositories** → identifies modules and confirms the target module before making changes.
 
-### 2. Native Android Full-Lifecycle Integration (`mediago-ads-android-integration`)
+### 2. Native Android Full-Lifecycle Integration (`mediago-monetization-sdk-android-integration`)
 
 #### A. Three Integration Modes
 | Mode | Supported Capabilities |
@@ -39,8 +39,8 @@ Official AI Agent Skills for integrating, upgrading, auditing, and troubleshooti
 - **Official Test Credentials**: Built-in official test App ID (`ad2fd73dca2ccffd312495bcd8a33d29`) and placement IDs for all 5 ad formats (Rewarded `100090001`, Interstitial `100090002`, Native `100090003`, Splash `100090004`, Banner `100090005`) for immediate demo/QA verification.
 - **Upgrade, Migration & Integration Audit**: Verifies Gradle/AGP/JDK/SDK compatibility (`compatibility/compatibility.json`), R8/ProGuard keep rules, manifest merger outputs, and memory-leak risks.
 
-### 3. Unity / Tuanjie Android Bridge (`mediago-ads-unity-android-integration`)
-- Audits and integrates MediaGo Ads in Unity Android projects across four evidence layers:
+### 3. Unity / Tuanjie Android Bridge (`mediago-monetization-sdk-unity-android-integration`)
+- Audits and integrates MediaGo Monetization SDK in Unity Android projects across four evidence layers:
   1. **EDM4U dependency declarations** (`*Dependencies.xml`)
   2. **Android Gradle & Manifest templates** (`Assets/Plugins/Android/mainTemplate.gradle`, `settingsTemplate.gradle`, `AndroidManifest.xml`)
   3. **C# JNI bridge code** (`AndroidJavaClass`, `AndroidJavaObject`, `AndroidJavaProxy`, and main-thread callback dispatching)
@@ -69,13 +69,13 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills
 
 # Or install English Android skills directly
 npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
-  --skill mediago-ads-integration \
-  --skill mediago-ads-android-integration
+  --skill mediago-monetization-sdk-integration \
+  --skill mediago-monetization-sdk-android-integration
 
 # Or install Chinese Android skills directly
 npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
-  --skill mediago-ads-integration-zh \
-  --skill mediago-ads-android-integration-zh
+  --skill mediago-monetization-sdk-integration-zh \
+  --skill mediago-monetization-sdk-android-integration-zh
 ```
 
 ### Option 2: Claude Code Plugin Marketplace
@@ -84,9 +84,9 @@ Run inside Claude Code:
 ```text
 /plugin marketplace add mediagoinapp-star/mediago_monetization_sdk_skills
 # Install English skills:
-/plugin install mediago-ads@mediago-ads-skills
+/plugin install mediago-monetization-sdk@mediago-monetization-sdk-skills
 # Or install Chinese skills:
-/plugin install mediago-ads-zh@mediago-ads-skills
+/plugin install mediago-monetization-sdk-zh@mediago-monetization-sdk-skills
 ```
 
 ### Option 3: Manual Installation
@@ -96,14 +96,14 @@ Clone this repository and copy the desired folders under `skills/` into your pro
 - **Codex / Universal Agents**: `.agents/skills/`
 
 ### Option 4: Companion MCP Server (Recommended alongside Skills)
-Pair these skills with the official [**`mediago-ads-mcp`**](https://github.com/mediagoinapp-star/mediago-ads-mcp) MCP server for deterministic SDK compatibility queries, code template generation, mediation parameter JSON generation, 3-layer error code diagnosis, and 10-stage Logcat funnel trace analysis:
+Pair these skills with the official [**`mediago_monetization_sdk_mcp`**](https://github.com/mediagoinapp-star/mediago_monetization_sdk_mcp) MCP server for deterministic SDK compatibility queries, code template generation, mediation parameter JSON generation, 3-layer error code diagnosis, and 10-stage Logcat funnel trace analysis:
 
 ```json
 {
   "mcpServers": {
-    "mediago-ads-mcp": {
+    "mediago_monetization_sdk_mcp": {
       "command": "npx",
-      "args": ["-y", "github:mediagoinapp-star/mediago-ads-mcp"]
+      "args": ["-y", "github:mediagoinapp-star/mediago_monetization_sdk_mcp"]
     }
   }
 }
@@ -115,29 +115,29 @@ Pair these skills with the official [**`mediago-ads-mcp`**](https://github.com/m
 
 | Skill Directory | Language | Description |
 |---|---|---|
-| `skills/mediago-ads-integration` | English | Project type detector and workflow router |
-| `skills/mediago-ads-android-integration` | English | Native Android Java/Kotlin integration, adapters, Client Bidding, and troubleshooting |
-| `skills/mediago-ads-unity-android-integration` | English | Unity / Tuanjie Android bridge via EDM4U, Gradle templates, and C# JNI |
-| `skills/mediago-ads-integration-zh` | 简体中文 | 识别客户工程类型并路由至受支持的工作流 |
-| `skills/mediago-ads-android-integration-zh` | 简体中文 | Android 原生 Java/Kotlin 直连、Client Bidding、聚合 Adapter 接入与排障 |
-| `skills/mediago-ads-unity-android-integration-zh` | 简体中文 | Unity / 团结引擎 Android 桥接（EDM4U + Gradle 模板 + C# JNI）接入与审查 |
+| `skills/mediago-monetization-sdk-integration` | English | Project type detector and workflow router |
+| `skills/mediago-monetization-sdk-android-integration` | English | Native Android Java/Kotlin integration, adapters, Client Bidding, and troubleshooting |
+| `skills/mediago-monetization-sdk-unity-android-integration` | English | Unity / Tuanjie Android bridge via EDM4U, Gradle templates, and C# JNI |
+| `skills/mediago-monetization-sdk-integration-zh` | 简体中文 | 识别客户工程类型并路由至受支持的工作流 |
+| `skills/mediago-monetization-sdk-android-integration-zh` | 简体中文 | Android 原生 Java/Kotlin 直连、Client Bidding、聚合 Adapter 接入与排障 |
+| `skills/mediago-monetization-sdk-unity-android-integration-zh` | 简体中文 | Unity / 团结引擎 Android 桥接（EDM4U + Gradle 模板 + C# JNI）接入与审查 |
 
 ---
 
 ## Example Prompts by Scenario
 
 - **New Direct SDK Integration**:
-  > "Use the MediaGo Android skill to inspect my project and plan a direct SDK integration for Rewarded and Interstitial ads using official test credentials."
+  > "Use the MediaGo Monetization SDK Android skill to inspect my project and plan a direct SDK integration for Rewarded and Interstitial ads using official test credentials."
 - **Add a Specific Ad Format (Native / Banner / Splash)**:
-  > "Help me integrate a MediaGo self-rendered NativeAd (`NativeAdLoader` + `NativeAd` + `registerViewForInteraction`) in my Kotlin feed fragment."
+  > "Help me integrate a MediaGo Monetization SDK self-rendered NativeAd (`NativeAdLoader` + `NativeAd` + `registerViewForInteraction`) in my Kotlin feed fragment."
 - **Mediation Adapter Setup (AdMob / MAX / TradPlus / TopOn)**:
-  > "Check my Android app module, integrate the MediaGo AppLovin MAX adapter, and tell me the exact Custom Network class name and parameters to configure in the MAX dashboard."
+  > "Check my Android app module, integrate the MediaGo Monetization SDK AppLovin MAX adapter, and tell me the exact Custom Network class name and parameters to configure in the MAX dashboard."
 - **Client Bidding Integration**:
-  > "Add MediaGo Client Bidding (`getResponseInfo().getEcpmLevel()`, `isReady()`, `notifyWin`, `notifyLoss`) to our existing `RewardedAd` manager."
+  > "Add MediaGo Monetization SDK Client Bidding (`getResponseInfo().getEcpmLevel()`, `isReady()`, `notifyWin`, `notifyLoss`) to our existing `RewardedAd` manager."
 - **Error Code & No-Fill Troubleshooting**:
-  > "We are getting MediaGo error code `1030003` (or `1040004` / `2000` / `4000`) when loading an interstitial ad. Diagnose the cause in our codebase."
+  > "We are getting MediaGo Monetization SDK error code `1030003` (or `1040004` / `2000` / `4000`) when loading an interstitial ad. Diagnose the cause in our codebase."
 - **Integration Audit / SDK Upgrade**:
-  > "Audit our current MediaGo SDK integration for lifecycle leaks, missing R8 rules, or initialization timing issues."
+  > "Audit our current MediaGo Monetization SDK integration for lifecycle leaks, missing R8 rules, or initialization timing issues."
 
 ---
 

@@ -1,11 +1,11 @@
 ---
-name: mediago-ads-android-integration-zh
-description: 在 Android 原生 Java 或 Kotlin 工程中接入、升级、审查、排查或验证 MediaGo Ads SDK，覆盖 SDK 直连、Client Bidding 以及 AdMob、AppLovin MAX、TradPlus 和 TopOn 聚合 Adapter。
+name: mediago-monetization-sdk-android-integration-zh
+description: 在 Android 原生 Java 或 Kotlin 工程中接入、升级、审查、排查或验证 MediaGo Monetization SDK，覆盖 SDK 直连、Client Bidding 以及 AdMob、AppLovin MAX、TradPlus 和 TopOn 聚合 Adapter。
 ---
 
-# MediaGo Ads Android 接入（中文）
+# MediaGo Monetization SDK Android 接入（中文）
 
-本 Skill 用于 Android 原生工程的 MediaGo Ads 工作。支持 SDK 直连、Client Bidding 及已批准的 AdMob、AppLovin MAX、TradPlus、TopOn 国际版、TopOn 旧版 Adapter 路径；不支持 Unity、Flutter、React Native、仅 iOS 工程或未文档化的自定义桥接。
+本 Skill 用于 Android 原生工程的 MediaGo Monetization SDK 工作。支持 SDK 直连、Client Bidding 及已批准的 AdMob、AppLovin MAX、TradPlus、TopOn 国际版、TopOn 旧版 Adapter 路径；不支持 Unity、Flutter、React Native、仅 iOS 工程或未文档化的自定义桥接。
 
 ## 不可跳过的规则
 

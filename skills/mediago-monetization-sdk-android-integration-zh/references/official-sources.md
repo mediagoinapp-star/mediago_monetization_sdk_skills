@@ -2,8 +2,8 @@
 
 事实冲突时，按以下优先级处理：
 
-1. 本仓库或其对外替代地址中，已通过发布审批的 MediaGo 兼容矩阵；
-2. 带版本的 MediaGo Android 对外接入文档；
+1. 本仓库或其对外替代地址中，已通过发布审批的 MediaGo Monetization SDK 兼容矩阵；
+2. 带版本的 MediaGo Monetization SDK Android 对外接入文档；
 3. 与已解析版本完全一致的公开 SDK/API 产物；
 4. 客户工程中的实际证据；
 5. 通用知识只能用于非版本化解释；不得用于 API 签名、Adapter 类名、依赖坐标或兼容性结论。

@@ -1,32 +1,32 @@
 {
-  "name": "mediago-ads-skills",
+  "name": "mediago-monetization-sdk-skills",
   "owner": {
-    "name": "MediaGo Ads SDK Team",
+    "name": "MediaGo Monetization SDK Team",
     "url": "https://github.com/mediagoinapp-star/mediago_monetization_sdk_skills"
   },
   "plugins": [
     {
-      "name": "mediago-ads",
+      "name": "mediago-monetization-sdk",
       "source": "./",
-      "description": "English Agent Skills for integrating, auditing, and troubleshooting MediaGo Ads SDK in Android and Unity Android bridge projects.",
+      "description": "English Agent Skills for integrating, auditing, and troubleshooting MediaGo Monetization SDK in Android and Unity Android bridge projects.",
       "version": "2.0.38",
       "strict": false,
       "skills": [
-        "./skills/mediago-ads-integration",
-        "./skills/mediago-ads-android-integration",
-        "./skills/mediago-ads-unity-android-integration"
+        "./skills/mediago-monetization-sdk-integration",
+        "./skills/mediago-monetization-sdk-android-integration",
+        "./skills/mediago-monetization-sdk-unity-android-integration"
       ]
     },
     {
-      "name": "mediago-ads-zh",
+      "name": "mediago-monetization-sdk-zh",
       "source": "./",
-      "description": "MediaGo Ads SDK 官方中文接入、审查与排障 Agent Skills（覆盖 Android 原生直连、Client Bidding、五大聚合 Adapter 及 Unity Android 桥接）。",
+      "description": "MediaGo Monetization SDK 官方中文接入、审查与排障 Agent Skills（覆盖 Android 原生直连、Client Bidding、五大聚合 Adapter 及 Unity Android 桥接）。",
       "version": "2.0.38",
       "strict": false,
       "skills": [
-        "./skills/mediago-ads-integration-zh",
-        "./skills/mediago-ads-android-integration-zh",
-        "./skills/mediago-ads-unity-android-integration-zh"
+        "./skills/mediago-monetization-sdk-integration-zh",
+        "./skills/mediago-monetization-sdk-android-integration-zh",
+        "./skills/mediago-monetization-sdk-unity-android-integration-zh"
       ]
     }
   ]

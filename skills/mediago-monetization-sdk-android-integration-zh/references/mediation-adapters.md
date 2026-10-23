@@ -1,6 +1,6 @@
 # 聚合平台适配（Mediation Adapters）配置指南
 
-当宿主项目通过三方聚合平台（AdMob / AppLovin MAX / TradPlus / TopOn）接入 MediaGo / AdMaster SDK 时，需要同时引入核心 SDK `cc.admaster.android:sdk` 与对应聚合平台的 Adapter 依赖，并在聚合后台配置对应的自定义 Adapter 类名与服务端参数。
+当宿主项目通过三方聚合平台（AdMob / AppLovin MAX / TradPlus / TopOn）接入 MediaGo Monetization SDK（AdMaster SDK）时，需要同时引入核心 SDK `cc.admaster.android:sdk` 与对应聚合平台的 Adapter 依赖，并在聚合后台配置对应的自定义 Adapter 类名与服务端参数。
 
 ---
 

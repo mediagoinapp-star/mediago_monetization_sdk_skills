@@ -8,7 +8,7 @@ Gradle 工程不一定是 Android 应用。选择 Android 流程前，应确认�
 
 Unity 工程同时包含 `Assets/` 和 `ProjectSettings/`。MediaGo 当前没有官方独立 Unity SDK/package；但具备 Android 目标证据的 Unity/团结引擎工程可以采用受支持的 **Unity Android Bridge 工作流**：通过 EDM4U/Gradle Template 引入 Android SDK，由经过审核的 C# `AndroidJavaObject`/`AndroidJavaProxy` bridge 承担调用和回调。
 
-若存在 `Assets/Plugins/Android/`、EDM `*Dependencies.xml`、Android Gradle/Manifest Template 或 bridge 代码，路由至 `mediago-ads-unity-android-integration`。不得将该路径称作官方 Unity SDK、编造 C# API 签名，或修改 `Library/` 下生成的 Gradle 输出。
+若存在 `Assets/Plugins/Android/`、EDM `*Dependencies.xml`、Android Gradle/Manifest Template 或 bridge 代码，路由至 `mediago-monetization-sdk-unity-android-integration-zh`。不得将该路径称作官方 Unity SDK、编造 C# API 签名，或修改 `Library/` 下生成的 Gradle 输出。
 
 ## 混合仓库
 

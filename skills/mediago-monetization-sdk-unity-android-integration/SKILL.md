@@ -1,9 +1,9 @@
 ---
-name: mediago-ads-unity-android-integration
-description: Integrate, audit, upgrade, troubleshoot, or validate MediaGo Ads through a Unity or Unity-China Android bridge using EDM4U, Android Gradle/Manifest templates, and reviewed C# JNI bridge code. Use for Unity projects with Android-target or AndroidJavaObject/AndroidJavaProxy bridge evidence.
+name: mediago-monetization-sdk-unity-android-integration
+description: Integrate, audit, upgrade, troubleshoot, or validate MediaGo Monetization SDK through a Unity or Unity-China Android bridge using EDM4U, Android Gradle/Manifest templates, and reviewed C# JNI bridge code. Use for Unity projects with Android-target or AndroidJavaObject/AndroidJavaProxy bridge evidence.
 ---
 
-# MediaGo Ads Unity Android Bridge Integration
+# MediaGo Monetization SDK Unity Android Bridge Integration
 
 Use this Skill for Unity/Unity-China customer projects that target Android through a C#-to-Android bridge. This is not an official standalone Unity SDK. Do not invent C# APIs, derive Android signatures from memory, or edit generated `Library/` output.
 
@@ -60,7 +60,7 @@ For direct and Client Bidding bridges, verify one initialization owner and ensur
 
 Exact Java class names, method signatures, callback interfaces, SDK versions, and adapter versions must come from an approved release entry. If the exported project uses a SNAPSHOT or lacks an approved compatibility entry, report it as a release blocker; do not invent compatibility.
 
-Read [bridge project model](references/bridge-project-model.md), plus the Android Skill references for [direct integration](../mediago-ads-android-integration/references/direct-integration.md), [formats](../mediago-ads-android-integration/references/ad-formats.md), [mediation](../mediago-ads-android-integration/references/mediation-adapters.md), [Client Bidding](../mediago-ads-android-integration/references/client-bidding.md), and [compatibility](../mediago-ads-android-integration/references/compatibility.md) as applicable.
+Read [bridge project model](references/bridge-project-model.md), plus the Android Skill references for [direct integration](../mediago-monetization-sdk-android-integration/references/direct-integration.md), [formats](../mediago-monetization-sdk-android-integration/references/ad-formats.md), [mediation](../mediago-monetization-sdk-android-integration/references/mediation-adapters.md), [Client Bidding](../mediago-monetization-sdk-android-integration/references/client-bidding.md), and [compatibility](../mediago-monetization-sdk-android-integration/references/compatibility.md) as applicable.
 
 ## 4. Plan and obtain explicit confirmation
 
@@ -80,4 +80,4 @@ After approval, run the narrowest approved operation: Force Resolve, Android exp
 
 - Gates: [bridge state](references/bridge-state.md)
 - Unity/EDM/templates/generated output: [bridge project model](references/bridge-project-model.md)
-- Android SDK lifecycle and formats: [Android integration references](../mediago-ads-android-integration/references/)
+- Android SDK lifecycle and formats: [Android integration references](../mediago-monetization-sdk-android-integration/references/)
