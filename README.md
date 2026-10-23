@@ -65,15 +65,15 @@ Works with **Cursor, Claude Code, Codex, GitHub Copilot, Windsurf, Cline, Roo Co
 
 ```bash
 # Interactive install (choose skills & target IDE)
-npx skills add mediagoinapp-star/mediago-ads-skills
+npx skills add mediagoinapp-star/mediago_monetization_sdk_skills
 
 # Or install English Android skills directly
-npx skills add mediagoinapp-star/mediago-ads-skills \
+npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
   --skill mediago-ads-integration \
   --skill mediago-ads-android-integration
 
 # Or install Chinese Android skills directly
-npx skills add mediagoinapp-star/mediago-ads-skills \
+npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
   --skill mediago-ads-integration-zh \
   --skill mediago-ads-android-integration-zh
 ```
@@ -82,7 +82,7 @@ npx skills add mediagoinapp-star/mediago-ads-skills \
 Run inside Claude Code:
 
 ```text
-/plugin marketplace add mediagoinapp-star/mediago-ads-skills
+/plugin marketplace add mediagoinapp-star/mediago_monetization_sdk_skills
 # Install English skills:
 /plugin install mediago-ads@mediago-ads-skills
 # Or install Chinese skills:

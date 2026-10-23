@@ -65,10 +65,10 @@
 
 ```bash
 # 交互式选择要安装的 Skill 和目标工具
-npx skills add mediagoinapp-star/mediago-ads-skills
+npx skills add mediagoinapp-star/mediago_monetization_sdk_skills
 
 # 或直接指定安装中文版 Android 接入 Skill
-npx skills add mediagoinapp-star/mediago-ads-skills \
+npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
   --skill mediago-ads-integration-zh \
   --skill mediago-ads-android-integration-zh
 ```
@@ -77,7 +77,7 @@ npx skills add mediagoinapp-star/mediago-ads-skills \
 在 Claude Code 中直接运行：
 
 ```text
-/plugin marketplace add mediagoinapp-star/mediago-ads-skills
+/plugin marketplace add mediagoinapp-star/mediago_monetization_sdk_skills
 /plugin install mediago-ads-zh@mediago-ads-skills
 ```
 
