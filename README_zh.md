@@ -88,8 +88,14 @@ npx skills add mediagoinapp-star/mediago_monetization_sdk_skills \
 - **Codex / 通用 Agent**：`.agents/skills/`
 
 ### 方式四：配套挂载官方 MCP Server（推荐，与 Skill 双剑合璧）
-本仓库配套提供官方 MCP 服务端 [**`mediago_monetization_sdk_mcp`**](https://github.com/mediagoinapp-star/mediago_monetization_sdk_mcp)，提供版本兼容矩阵查询、多语言代码模板生成、聚合参数 JSON 生成、三层错误码精准诊断与 Logcat 10 阶段生命周期漏斗分析。在 `.cursor/mcp.json` 或 `.mcp.json` 中添加：
+本仓库配套提供官方 MCP 服务端 [**`mediago_monetization_sdk_mcp`**](https://github.com/mediagoinapp-star/mediago_monetization_sdk_mcp)（v1.1.0，提供全套 10 大工具 + CLI 初始化向导），支持版本兼容矩阵查询、多语言代码模板生成、聚合参数 JSON 生成、测试凭证防呆校验、Gradle/Manifest 与接入代码 7 大反模式静态体检、生产级双缓冲缓存池生成、三层错误码精准诊断、Logcat 10 阶段生命周期漏斗分析与真机 ADB 联调诊断。
 
+**在宿主工程根目录一键零配置初始化（自动写入 `.cursor/mcp.json` 与 `.mcp.json` 并执行工程体检）：**
+```bash
+npx -y github:mediagoinapp-star/mediago_monetization_sdk_mcp init
+```
+
+或手动在 `.cursor/mcp.json` / `.mcp.json` 中添加：
 ```json
 {
   "mcpServers": {

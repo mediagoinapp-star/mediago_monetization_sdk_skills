@@ -96,8 +96,14 @@ Clone this repository and copy the desired folders under `skills/` into your pro
 - **Codex / Universal Agents**: `.agents/skills/`
 
 ### Option 4: Companion MCP Server (Recommended alongside Skills)
-Pair these skills with the official [**`mediago_monetization_sdk_mcp`**](https://github.com/mediagoinapp-star/mediago_monetization_sdk_mcp) MCP server for deterministic SDK compatibility queries, code template generation, mediation parameter JSON generation, 3-layer error code diagnosis, and 10-stage Logcat funnel trace analysis:
+Pair these skills with the official [**`mediago_monetization_sdk_mcp`**](https://github.com/mediagoinapp-star/mediago_monetization_sdk_mcp) MCP server (v1.1.0, 10 tools + CLI wizard) for deterministic SDK compatibility queries, code template generation, mediation parameter JSON generation, test credential validation, static Gradle/Manifest & code anti-pattern auditing, production cache-queue generation, 3-layer error code diagnosis, 10-stage Logcat funnel trace analysis, and live ADB device verification.
 
+**One-command zero-config initialization in your project root:**
+```bash
+npx -y github:mediagoinapp-star/mediago_monetization_sdk_mcp init
+```
+
+Or add manually to `.cursor/mcp.json` / `.mcp.json`:
 ```json
 {
   "mcpServers": {
